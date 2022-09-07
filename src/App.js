@@ -8,6 +8,18 @@ const api = {
 
 // console.log(api.key)
 function App() {
+
+  const dateBuilder = (d) => {
+    let months = ['Styczeń', 'Luty', 'Marzec', 'Kwiecień', 'Maj', 'Czerwiec', 'Lipiec', 'Sierpień', 'Wrzesień', 'Październik', 'Listopad', 'Grudzień'];
+    let days  = ['Niedziela', 'Poniedziałek', 'Wtorek', 'Środa', 'Czwartek', 'Piątek', 'Sobota'];
+
+    let day = days[d.getDay()];
+    let date = d.getDate();
+    let month = months[d.getMonth()];
+    let year = d.getFullYear();
+    
+    console.log(day, month, date, year)
+  }
   return (
     <div className="app">
       <main>
@@ -17,6 +29,10 @@ function App() {
             className='search-bar'
             placeholder="Search..."
           />
+        </div>
+        <div className="location-box">
+          <div className="location">Kielce, PL</div>
+          <div className="date">{dateBuilder(new Date())}</div>
         </div>
       </main>
     </div>
