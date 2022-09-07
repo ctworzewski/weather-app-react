@@ -52,6 +52,10 @@ function App() {
           <div className="location">Kielce, PL</div>
           <div className="date">{dateBuilder(new Date())}</div>
         </div>
+        <div className="weather-box">
+          <div className="temp"> 16°C</div>
+          <div className="weather">Słonecznie</div>
+        </div>
       </main>
     </div>
   );
